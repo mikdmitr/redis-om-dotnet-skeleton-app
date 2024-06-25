@@ -6,7 +6,7 @@ namespace Redis.OM.Skeleton.Model;
 public class Person
 {
     // Id Field, also indexed, marked as nullable to pass validation
-    [RedisIdField] [Indexed]public string? Id { get; set; }
+    [RedisIdField] [Indexed]public string? Id { get; set; } = Guid.NewGuid().ToString();
 
     // Indexed for exact text matching
     [Indexed] public string? FirstName { get; set; }
